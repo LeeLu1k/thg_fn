@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THG Competitive</title>
+
+  <style>
+    /* ========== THG CSS FRAMEWORK v1.1 (Black & Gray) ========== */
+    :root {
+      --bg-main: #0a0a0a;
+      --bg-secondary: #141414;
+      --bg-card: #1c1c1c;
+      --border-soft: rgba(255,255,255,.08);
+      --text-main: #ffffff;
+      --text-muted: #9a9a9a;
+      --accent: #d9d9d9;
+      --radius-xl: 22px;
+      --radius-md: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Inter, system-ui, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, #0a0a0a, #000000);
+      color: var(--text-main);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      border: 1px solid var(--border-soft);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      background: #ffffff;
+      color: #000;
+      font-weight: 600;
+      transition: opacity .2s, transform .2s;
+    }
+
+    .btn:hover { opacity: .85; transform: translateY(-2px); }
+
+    h1 { font-size: clamp(38px, 6vw, 64px); margin: 20px 0; }
+    h2 { font-size: 28px; margin-bottom: 16px; }
+    h3 { margin-bottom: 8px; }
+
+    p { color: var(--text-muted); line-height: 1.6; }
+
+    header {
+      text-align: center;
+      padding: 100px 20px 120px;
+    }
+
+    /* VIDEO */
+    .video-box video {
+      width: 100%;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-soft);
+    }
+
+    /* PLAYERS */
+    .player {
+      text-align: center;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: #2a2a2a;
+      margin: 0 auto 14px;
+      border: 1px solid var(--border-soft);
+    }
+
+    footer {
+      border-top: 1px solid var(--border-soft);
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="container">
+    <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+      <span class="tag">THG ESPORTS</span>
+      <span class="tag">COMPETITIVE</span>
+      <span class="tag">EU</span>
+    </div>
+
+    <h1>THG Competitive League</h1>
+    <p>Черно-серый соревновательный хаб THG. Турниры, видео и игроки команды.</p>
+
+    <div style="margin-top:32px;">
+      <a href="#videos" class="btn">Смотреть видео</a>
+    </div>
+  </header>
+
+  <!-- VIDEO SECTION -->
+  <section id="videos" class="container">
+    <h2>Видео</h2>
+    <div class="grid grid-3">
+      <div class="card video-box">
+        <video controls poster="poster1.jpg">
+          <source src="video1.mp4" type="video/mp4">
+        </video>
+        <p style="margin-top:10px;">Лучшие моменты турнира</p>
+      </div>
+      <div class="card video-box">
+        <video controls poster="poster2.jpg">
+          <source src="video2.mp4" type="video/mp4">
+        </video>
+        <p style="margin-top:10px;">Финальные игры</p>
+      </div>
+      <div class="card video-box">
+        <video controls poster="poster3.jpg">
+          <source src="video3.mp4" type="video/mp4">
+        </video>
+        <p style="margin-top:10px;">Лучшие клипы</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAYERS -->
+  <section class="container">
+    <h2>Игроки</h2>
+    <div class="grid grid-3">
+      <div class="card player">
+        <div class="avatar"></div>
+        <h3>levtik666</h3>
+        <p>Основной игрок · EU</p>
+      </div>
+      <div class="card player">
+        <div class="avatar"></div>
+        <h3>PlayerTwo</h3>
+        <p>Снайпер · EU</p>
+      </div>
+      <div class="card player">
+        <div class="avatar"></div>
+        <h3>PlayerThree</h3>
+        <p>Support · EU</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 THG Esports. Все права защищены.
+  </footer>
+
+</body>
+</html>
